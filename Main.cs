@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FrameworkExtensions;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,7 +24,11 @@ namespace Tool_DevToys
             string strInput = rTxtInput.Text;
             string strOutput = Action(strInput);
             rTxtOutput.Text = strOutput;
-            Clipboard.SetText(strOutput);
+            if(strOutput.pAny())
+            {
+                Clipboard.SetText(strOutput);
+            }
+            
             btnAction.Enabled = true;
         }
 

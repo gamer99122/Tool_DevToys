@@ -79,5 +79,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FrameworkExtensions\FrameworkExtensions.csproj">
+      <Project>{d0f526ee-9af0-4ac8-ad01-64b1b18529ff}</Project>
+      <Name>FrameworkExtensions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
